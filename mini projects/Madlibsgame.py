@@ -1,0 +1,11 @@
+Adjective1 = input("Enter an Adjective:  ")
+noun = input("Enter a noun:  ")
+Adjective2 = input("Enter another Adjective:  ")
+Adjective3 = input("Enter yet another Adjective:  ")
+verb = input("Enter a verb:  ")
+
+print(f"Today i went to the school and it was >{Adjective1}")
+print(f"I met {noun} there")
+print(f"{noun} was {Adjective2} and {verb}")
+print(f"i was {Adjective3}")
+print('the end')
