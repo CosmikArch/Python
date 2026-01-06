@@ -1,5 +1,5 @@
 introduction
-Hello it's me cosmic or Aditya whatever you like, i am here to discuss about my latest creation “Random number guessing game” yup I know the name is long but bare with me this game is my first every big project. it's currently in the version 0.7, i am currently working on version 0.8 and will require simdebugging so it can take anywhere from a day to 5. 
+Hello it's me cosmic or Aditya whatever you like, i am here to discuss about my latest creation “Random number guessing game” yup I know the name is long but bare with me this game is my first every big project. it's currently in the version 0.7, i am currently working on version 0.8 and will require some minor improvements so it can take anywhere from a day to 5. 
 
 change logs:
 V0.1 – Basic Game
