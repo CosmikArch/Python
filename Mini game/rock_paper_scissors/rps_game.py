@@ -1,5 +1,5 @@
 #  rock paper scissors
-#  version 0.2
+#  version 0.3
 
 import random #  for choice computers can't think duh 🙄 
 import time #  for the countdown 🙂 
@@ -17,54 +17,57 @@ player = input("Enter your username:  ") #please don't use numbers 🥺
 print(f"Greeting, {player}, I am RNG_The_Chad. {Greet}")
 
 choices = ["rock", "paper", "scissors"] #actual set of choices
+while True:  #  while true so it loops forever until stopped
+  computer_choice = random.choice(choices) #to randomly pick ⛏️ a set choice 
+  print("                                         ")
 
-computer_choice = random.choice(choices) #to randomly pick ⛏️ a set choice 
-print("                                         ")
 
+  print("Rock") #a count down for more realism
+  time.sleep(0.5)
+  print("paper")
+  time.sleep(0.5)
+  print("scissors")
+  time.sleep(0.5)
 
-print("Rock") #a count down for more realism
-time.sleep(0.5)
-print("paper")
-time.sleep(0.5)
-print("scissors")
-time.sleep(0.5)
+  player_choice = input("Choose you call (or type exit to exit):  ").lower()
 
-player_choice  = input("Choose you call:  ")
-player_choice = player_choice.lower()
+  if player_choice == "exit":
+    print("Cowardice detected 🏃💨 Game over.")
+    break
 
-time.sleep(1)
-print(f"RNG_The_Chad chose {computer_choice}") # to actually see what The Chad chose
+  time.sleep(1)
+  print(f"RNG_The_Chad chose {computer_choice}") # to actually see what The Chad chose
 
-#  tie condition 
-if player_choice == computer_choice:
-  print("It's a tie!")
+  #  tie condition 
+  if player_choice == computer_choice:
+    print("It's a tie!")
   
-#  winning conditions
-elif player_choice == "rock" and computer_choice == "scissors":
-  print("You win!🎊")
-  player_score += 1
-elif player_choice == "paper" and computer_choice == "rock":
-  print("You win!🎉")
-  player_score += 1
-elif player_choice == "scissors" and computer_choice == "paper":
-  print("You win!🎉") #winning conditions done ✅
-  player_score += 1
+  #  winning conditions
+  elif player_choice == "rock" and computer_choice == "scissors":
+    print("You win!🎊")
+    player_score += 1
+  elif player_choice == "paper" and computer_choice == "rock":
+    print("You win!🎉")
+    player_score += 1
+  elif player_choice == "scissors" and computer_choice == "paper":
+    print("You win!🎉") #winning conditions done ✅
+    player_score += 1
   
   #  losing conditions
-elif player_choice == "rock" and computer_choice == "paper":
-  print("You lose! :(")
-  RNG_score += 1
-elif player_choice == "paper" and computer_choice == "scissors":
-  print("You lose! :(")
-  RNG_score += 1
-elif player_choice == "scissors" and computer_choice == "rock":
-  print("You lose! :(")
-  RNG_score += 1
+  elif player_choice == "rock" and computer_choice == "paper":
+    print("You lose! :(")
+    RNG_score += 1
+  elif player_choice == "paper" and computer_choice == "scissors":
+    print("You lose! :(")
+    RNG_score += 1
+  elif player_choice == "scissors" and computer_choice == "rock":
+    print("You lose! :(")
+    RNG_score += 1
   
-else:
-  print(f"{player_choice} is not a valid choice! you are dumb 🗿")
-  player_score -= 1 #  penalty for trying to break the code! 😈
-print(f"""----------Score------------
+  else:
+    print(f"{player_choice} is not a valid choice! you are dumb 🗿")
+    player_score -= 1 #  penalty for trying to break the code! 😈
+  print(f"""----------Score------------
 {player} - {player_score} 
 RNG_The_Chad - {RNG_score}
 -------------------------------""")
