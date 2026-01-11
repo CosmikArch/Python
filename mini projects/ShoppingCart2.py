@@ -2,6 +2,7 @@
 
 foods = []
 prices = []
+quantities = []
 total = 0
 
 while True:
@@ -10,19 +11,18 @@ while True:
     print("Shopping completed ✅")
     break 
   else:
-    vowels = "aeiou" #just so english doesn't haunt me forever 
-    article = "an" if food[0].lower() in vowels else "a"
-    price = float(input(f"Enter the value of {article} {food}:  ₹"))
+    price = float(input(f"What is the price of 1 {food}:  ₹"))
+    quantity = int(input(f"how many {food} are you buying?  "))
+    price = price * quantity 
+    
     foods.append(food)
     prices.append(price)
-
 print("------------YOUR CART--------------")
 
-for food in foods:
-  print(food)
+for i in range(len(foods)):
+    print(f"{foods[i]} : ₹{prices[i]}")
 
-for price in prices:
-  total += price
-  
-print()
-print(f"Your total would be {total}₹")
+total = sum(prices)
+
+print("--------------------------------------------")
+print(f"Your total would be ₹{total}")
